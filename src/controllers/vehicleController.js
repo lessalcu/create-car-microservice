@@ -11,12 +11,12 @@ exports.registerVehicle = async (req, res) => {
 
   try {
     // Insertar vehículo en la base de datos
-    const [result] = await db.execute(
+    await db.execute(
       'INSERT INTO Cars (userId, licensePlate, brand, model, color) VALUES (?, ?, ?, ?, ?)',
       [userId, licensePlate, brand, model, color]
     );
     
-    // Responder con el ID del vehículo registrado
+    // Responder sin incluir el ID del vehículo
     res.status(201).json({
       message: 'Vehicle registered successfully'
     });
