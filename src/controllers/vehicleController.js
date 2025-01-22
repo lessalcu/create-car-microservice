@@ -18,8 +18,7 @@ exports.registerVehicle = async (req, res) => {
     
     // Responder con el ID del vehículo registrado
     res.status(201).json({
-      message: 'Vehicle registered successfully',
-      vehicleId: result.insertId
+      message: 'Vehicle registered successfully'
     });
   } catch (error) {
     console.error('Error registering vehicle:', error);
