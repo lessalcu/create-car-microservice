@@ -1,6 +1,6 @@
 .env
 node_modules/
-
+.dockerignore
 # Logs
 logs/
 *.log
@@ -8,15 +8,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Directorios de construcción
 dist/
 build/
 
-# Archivos de configuración del sistema operativo
 .DS_Store
 Thumbs.db
 
-# Archivos de configuración del editor
 .vscode/
 .idea/
 *.suo
@@ -24,5 +21,4 @@ Thumbs.db
 *.njsproj
 *.sln
 
-# Archivos de configuración de pruebas
 coverage/
