@@ -1,12 +1,16 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const vehicleRoutes = require('./routes/vehicleRoutes');
-const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-app.use(bodyParser.json());
+const app = express();
+
+// Habilitar CORS en todas las rutas de este microservicio
+app.use(cors());
+
+app.use(express.json());
 
 app.use('/api/vehicle', vehicleRoutes);
 
